@@ -14,6 +14,12 @@ void imprimir_matriz( int **mat, int colunas, int linhas){
     }
 }
 
+void destroi_matriz(int **mat, int linhas){
+    for(int l = 0; l < linhas; l++)
+        free(mat[l]);
+    free(mat);
+}
+
 int main()
 {
 
@@ -37,7 +43,7 @@ int main()
     }
 
     imprimir_matriz(matriz, col, lin);
-
+    destroi_matriz(matriz, lin);
 
     return 0;
 }
