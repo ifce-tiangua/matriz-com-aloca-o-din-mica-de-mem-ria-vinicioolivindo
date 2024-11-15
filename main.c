@@ -8,7 +8,7 @@ void imprimir_matriz( int **mat, int colunas, int linhas){
     }
     for(int l = 0; l < linhas; l++){
         for(int c = 0; c < colunas; c++){
-            printf("%d", mat[l][c]);
+            printf("%d ", mat[l][c]);
         }
         printf("\n");
     }
