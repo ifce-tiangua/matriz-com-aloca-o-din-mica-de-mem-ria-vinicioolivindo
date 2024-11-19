@@ -1,21 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void imprimir_matriz( int **mat, int colunas, int linhas){
-    if (linhas == 0 || colunas == 0){
+void imprimir_matriz(int **mat, int colunas, int linhas)
+{
+    if (linhas == 0 || colunas == 0)
+    {
         printf("[matriz vazia]");
         return;
     }
-    for(int l = 0; l < linhas; l++){
-        for(int c = 0; c < colunas; c++){
-            printf("%d ", mat[l][c]);
+    for (int l = 0; l < linhas; l++)
+    {
+        for (int c = 0; c < colunas; c++)
+        {
+            printf("%d", mat[l][c]);
+            if (c < colunas - 1)
+            {
+                printf(" ");
+            }
         }
+
         printf("\n");
     }
 }
 
-void destroi_matriz(int **mat, int linhas){
-    for(int l = 0; l < linhas; l++)
+void destroi_matriz(int **mat, int linhas)
+{
+    for (int l = 0; l < linhas; l++)
         free(mat[l]);
     free(mat);
 }
@@ -44,7 +54,6 @@ int main()
 
     imprimir_matriz(matriz, col, lin);
     destroi_matriz(matriz, lin);
-    
 
     return 0;
 }
