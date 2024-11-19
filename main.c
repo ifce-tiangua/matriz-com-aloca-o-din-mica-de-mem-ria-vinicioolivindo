@@ -44,6 +44,7 @@ int main()
 
     imprimir_matriz(matriz, col, lin);
     destroi_matriz(matriz, lin);
+    
 
     return 0;
 }
